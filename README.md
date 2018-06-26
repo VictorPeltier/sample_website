@@ -5,5 +5,5 @@ This repo is just a collection of pages to follow on the Learn Enough HTML to be
 
 ## Content
 In this website, you'll be able to find : 
-	- website pages
-	- tests about CSS and HTML
+- website pages
+-  tests about CSS and HTML
