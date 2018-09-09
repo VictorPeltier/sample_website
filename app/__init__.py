@@ -1,7 +1,7 @@
 # app/__init__.py
 
 from flask_api import FlaskAPI
-from flask-sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 
 # local import
 from instance.config import app_config
