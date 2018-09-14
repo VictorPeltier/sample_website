@@ -26,11 +26,11 @@ class Happycal(db.Model):
 
     @staticmethod
     def get_all():
-        return happydaysl.query.all()
+        return happydays.query.all()
 
     def delete(self):
         db.session.delete(self)
         db.session.commit()
 
     def __repr__(self):
-        return "<Happycal :{]>".format(self.name)
+        return "<Happycal :{}]>".format(self.name)
