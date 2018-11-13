@@ -32,22 +32,22 @@ def create_app(config_name):
                 })
                 response.status_code = 201
                 return response
-            else:
-                #GET
-                happycals = happycal.get_all()
-                results = []
+        else:
+            #GET
+            happycals = Happycal.get_all()
+            results = []
 
-                for happycal in happycals : 
-                    obj = {
-                        'id':happycal.id,
-                        'name':happycal.name,
-                        'date_created':happycal.date_created,
-                        'date_modified':happycal.date_modified
-                    }
-                    results.append(obj)
-                response = jsonify(results)
-                response.status_code = 200
-                return response
+            for happycal in happycals : 
+                obj = {
+                    'id':happycal.id,
+                    'name':happycal.name,
+                    'date_created':happycal.date_created,
+                    'date_modified':happycal.date_modified
+                }
+                results.append(obj)
+            response = jsonify(results)
+            response.status_code = 200
+            return response
     @app.route('/happycals/<int:id>', methods=['GET','PUT','DELETE'])
     def happycal_manipulation(id, **kwargs):
         #retrieve a bucketlist using its ID
@@ -69,7 +69,7 @@ def create_app(config_name):
                 'date_created':happycal.date_created,
                 'date_modified':happycal.date_modified
             })
-            reponse.status_code = 200
+            response.status_code = 200
             return response
 
         else: 
@@ -80,7 +80,7 @@ def create_app(config_name):
                 'date_created':happycal.date_created,
                 'date_modified':happycal.date_modified
             })
-            reponse.status_code=200
+            response.status_code=200
             return response
 
     return app

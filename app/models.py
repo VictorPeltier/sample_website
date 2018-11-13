@@ -5,7 +5,7 @@ from app import db
 class Happycal(db.Model):
     """This class represents the HappyCalendar model."""
 
-    __tablename__ = 'happydays'
+    __tablename__ = 'happycals'
 
 
     id = db.Column(db.Integer, primary_key=True)
@@ -26,7 +26,7 @@ class Happycal(db.Model):
 
     @staticmethod
     def get_all():
-        return happydays.query.all()
+        return Happycal.query.all()
 
     def delete(self):
         db.session.delete(self)
