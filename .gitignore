@@ -1,4 +1,2 @@
 **/*.pyc
 **/.git
-**/.gitignore
-**/.env
